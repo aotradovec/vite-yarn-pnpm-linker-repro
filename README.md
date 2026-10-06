@@ -1,6 +1,7 @@
 # Vite: dependency cache never invalidates with Yarn 4 `nodeLinker: pnpm`
 
-Vite 8.3.3, Yarn 4.1.1 (use `corepack yarn` if your global Yarn is 1.x).
+Vite 8.3.3, Yarn 4.1.1. Run `corepack enable` once first (otherwise a global Yarn 1.x refuses to run because of the
+`packageManager` field), or prefix every `yarn` command below with `corepack`.
 
 1. `yarn install` — note that `node_modules/.yarn-state.yml` and `node_modules/.pnpm` do not exist.
 2. `yarn dev`, open the page so `lodash-es` gets pre-bundled, stop the server.
